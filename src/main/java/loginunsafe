@@ -1,0 +1,12 @@
+import java.io.*;
+
+public class LoginUnsafe {
+    public static void main(String[] args) throws Exception {
+
+        FileReader file = new FileReader("test.txt");
+        BufferedReader reader = new BufferedReader(file);
+
+        String line = reader.readLine();
+        System.out.println(line);
+    }
+}
