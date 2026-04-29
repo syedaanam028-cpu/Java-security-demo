@@ -1,12 +1,16 @@
-import java.io.*;
+import java.util.Random;
 
 public class LoginUnsafe {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
-        FileReader file = new FileReader("test.txt");
-        BufferedReader reader = new BufferedReader(file);
+        // Hardcoded password (security issue)
+        String password = "123456";
 
-        String line = reader.readLine();
-        System.out.println(line);
+        // Weak random number generator (security issue)
+        Random rand = new Random();
+        int token = rand.nextInt();
+
+        System.out.println("Generated token: " + token);
+        System.out.println("Password is: " + password);
     }
 }
